@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Responsive Coming soon Template</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato&family=Poppins:wght@300;400&family=Ubuntu&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato&family=Libre+Baskerville:wght@700&family=Poppins:wght@300;400&family=Ubuntu&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="preloader">
+        <div class="w-16 h-16 border-4 border-dashed rounded-full animate-spin dark:border-violet-400"></div>
+      </div>
+  <section class="flex flex-col md:flex-row h-screen items-center">
+    <!-- Left Text Section -->
+    <div class="bg-indigo-600  lg:block w-full md:w-1/2 xl:w-2/3 h-screen relative">
+      <img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1025&q=80" alt="" class="w-full h-full object-cover ">
+      <div class="absolute top-1/2 left-0 transform md:left-0 -translate-y-1/2 p-4 text-white bg-black bg-opacity-50">
+        <h1 style="font-family: 'poppins', sans-serif;" class="text-6xl lg:text-7xl xl:text-8xl text-gray-200 tracking-wider font-bold font-serif mt-12 text-center md:text-left">We Are <span class="text-[#ECD812]" style="font-family: 'Libre Baskerville', serif;" >Coming</span> Soon</h1>
+        <hr class="border-gray-300 mt-4">
+        <div class="flex space-x-4 mt-12" x-data="timer(new Date().setDate(new Date().getDate() + 1))" x-init="init();">
+            <div class="flex flex-col px-4">
+                <span x-text="time().days" class="text-4xl lg:text-5xl text-gray-200">00</span>
+                <span class="text-gray-400 mt-2">Days</span>
+            </div>
+            <span class="w-[1px] h-24 bg-gray-400"></span>
+            <div class="flex flex-col items-center px-4">
+                <span x-text="time().hours" class="text-4xl lg:text-5xl text-gray-200">23</span>
+                <span class="text-gray-400 mt-2">Hours</span>
+            </div>
+            <span class="w-[1px] h-24 bg-gray-400"></span>
+            <div class="flex flex-col items-center px-4">
+                <span x-text="time().minutes" class="text-4xl lg:text-5xl text-gray-200">59</span>
+                <span class="text-gray-400 mt-2">Minutes</span>
+            </div>
+            <span class="w-[1px] h-24 bg-gray-400"></span>
+            <div class="flex flex-col items-center px-4">
+                <span x-text="time().seconds" class="text-4xl lg:text-5xl text-gray-200">28</span>
+                <span class="text-gray-400 mt-2">Seconds</span>
+            </div>
+        </div>
+    </div>
+      </div>
+    </div>
+
+    <!-- Right Email Signup Form Section -->
+    <div class="bg-white w-full md:max-w-md lg:max-w-full md:mx-auto md:mx-0 md:w-1/2 xl:w-1/3 h-screen px-6 lg:px-16 xl:px-12
+        flex items-center justify-center">
+      <div class="w-full h-100">
+        <h1 class="text-xl md:text-2xl font-bold leading-tight mt-12" style="font-family: 'Poppins', sans-serif;">Subscribe Us <i class="fa-regular fa-bell text-md ml-3"></i></h1>
+        <p class="text-sm mt-3" style="font-family: 'Poppins', sans-serif;">In the meantime, subscribe to our email list and stay updated.</p>
+        <div class="w-full flex left-0 mt-8 mb-6">
+            <ul class="flex items-center space-x-4">
+                <li>
+                    <a href="#" title="Facebook" class="bg-gray-600 hover:bg-gray-700 p-2 rounded-lg">
+                        <i class="fa-brands fa-facebook text-white text-lg"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" title="Twitter" class="bg-gray-600 hover:bg-gray-700 p-2 rounded-lg">
+                        <i class="fa-brands fa-twitter text-white text-lg"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" title="instagram" class="bg-gray-600 hover:bg-gray-700 p-2 rounded-lg">
+                        <i class="fa-brands fa-instagram  text-white text-lg"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <hr class="mt-3 border-gray-300">
+        <form class="mt-6" action="#" method="POST">
+            <div>
+                <label class="block text-gray-700 text-md" style="font-family: 'Poppins', sans-serif;">Email Address</label>
+                <input type="email" name="" id="" placeholder="Enter Email Address" style="font-family: 'Poppins', sans-serif;" class="text-xs w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none" autofocus autocomplete required>
+              </div>
+  
+              <button type="submit" class="w-full block bg-[#12BAEC] hover:bg-[#12B1EC] focus:bg-[#12B1EC] text-white font-semibold rounded-lg
+                    px-4 py-3 mt-6">Subscribe<i class="fa-regular fa-envelope ml-3"></i></button>
+        </form>
+      </div>
+    </div>
+  </section>
+  <div class="md:mb-0 mb-20">
+
+  </div>
+  <style>
+    /* Add your custom styles for the preloader here */
+    .preloader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background-color: #f0f0f0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+  </style>
+  <script>
+    setTimeout(function() {
+      document.querySelector('.preloader').style.display = 'none';
+    }, 2000);
+    function timer(expiry) {
+      return {
+        expiry: expiry,
+        remaining:null,
+        init() {
+        this.setRemaining()
+        setInterval(() => {
+            this.setRemaining();
+        }, 1000);
+        },
+        setRemaining() {
+        const diff = this.expiry - new Date().getTime();
+        this.remaining =  parseInt(diff / 1000);
+        },
+        days() {
+        return {
+            value:this.remaining / 86400,
+            remaining:this.remaining % 86400
+        };
+        },
+        hours() {
+        return {
+            value:this.days().remaining / 3600,
+            remaining:this.days().remaining % 3600
+        };
+        },
+        minutes() {
+            return {
+            value:this.hours().remaining / 60,
+            remaining:this.hours().remaining % 60
+        };
+        },
+        seconds() {
+            return {
+            value:this.minutes().remaining,
+        };
+        },
+        format(value) {
+        return ("0" + parseInt(value)).slice(-2)
+        },
+        time(){
+            return {
+            days:this.format(this.days().value),
+            hours:this.format(this.hours().value),
+            minutes:this.format(this.minutes().value),
+            seconds:this.format(this.seconds().value),
+        }
+        },
+      };
+    }
+  </script>
+</body>
+</html>
